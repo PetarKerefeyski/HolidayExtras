@@ -9,6 +9,7 @@ export class PostComponent implements OnInit {
 
   @Input()
   post: object;
+  query: string;
 
   constructor() { }
 

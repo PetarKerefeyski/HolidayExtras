@@ -1,4 +1,5 @@
 import { Component, OnInit, ValueProvider } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { GalleryService } from '../gallery.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
@@ -20,6 +21,7 @@ export class GalleryComponent implements OnInit {
   public allPosts: any;
   public currIndex: number;
   public offset: number;
+  public query: string;
 
   ngOnInit() {
     this.getGalleryData();
@@ -31,9 +33,9 @@ export class GalleryComponent implements OnInit {
         console.log(data);
         this.allPosts = _.cloneDeep(data);
         this.posts = data;
-        this.posts.items.length = 5;
-        this.offset = 1;
-        this.currIndex = 5;
+        this.posts.items.length = 10;
+        this.offset = 5;
+        this.currIndex = 10;
       }
     )
   }
@@ -46,7 +48,6 @@ export class GalleryComponent implements OnInit {
       this.posts.items.push(this.allPosts.items[index]);
     }
     this.currIndex += this.offset;
-    console.log('scrolled down!!');
   }
   
 }

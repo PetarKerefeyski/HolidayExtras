@@ -1,9 +1,15 @@
-<div class="row" *ngIf="posts" 
-  infinite-scroll
-  [infiniteScrollDistance]="1"
-  [infiniteScrollThrottle]="20"
-  (scrolled)="onScrollDown()">
-  <div class="column" *ngFor="let post of posts.items" >
-    <app-post [post]=post></app-post>
+<div class="container">
+  <h1>Holiday Extras Task</h1>
+  <h2>Flickr Photo Stream</h2>
+  <input type="text" placeholder="Search by photo title" [(ngModel)]="query" id="listSearch">
+
+  <div class="row" *ngIf="posts" 
+    infinite-scroll
+    [infiniteScrollDistance]="1"
+    [infiniteScrollThrottle]="20"
+    (scrolled)="onScrollDown()">
+    <div class="column" *ngFor="let post of posts.items | filter:query" >
+      <app-post [post]=post></app-post>
+    </div>
   </div>
 </div>

@@ -1,11 +1,22 @@
 <div class="column">
+  <div class="author">
+      <span class="property">Author:</span> 
+    <a target="_blank" [href]= "'https://www.flickr.com/photos/' + getAuthor(post.author)">
+       {{getAuthor(post.author)}}
+    </a>
+  </div>
   <div class="image">
     <img [src]="post.media.m">
-  </div>
-  <div>
-    <a href="post.link">
-      <div>{{post.title}}</div>
-    </a> by 
-    <a [href]= "'https://www.flickr.com/photos/' + getAuthor(post.author)">{{getAuthor(post.author)}}</a>
+    <div class="title">
+      <a target="_blank" [href]="post.media.m">
+        <div>{{post.title}}</div>
+      </a>
+    </div>  
+    <div *ngIf="post.tags.length">
+      <div class="tags">
+        <span class="property">Tags:</span> 
+        {{post.tags}}
+      </div>
+    </div>
   </div>
 </div>

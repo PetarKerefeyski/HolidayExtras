@@ -6,15 +6,19 @@ import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { PostComponent } from './post/post.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filters.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GalleryComponent,
-    PostComponent
+    PostComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule, 
     InfiniteScrollModule
   ],

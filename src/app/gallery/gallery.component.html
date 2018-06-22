@@ -1,3 +1,9 @@
-<p>
-  gallery works!
-</p>
+<div class="row" *ngIf="posts" 
+  infinite-scroll
+  [infiniteScrollDistance]="1"
+  [infiniteScrollThrottle]="20"
+  (scrolled)="onScrollDown()">
+  <div class="column" *ngFor="let post of posts.items" >
+    <app-post [post]=post></app-post>
+  </div>
+</div>

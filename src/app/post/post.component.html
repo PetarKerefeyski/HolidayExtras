@@ -1,3 +1,11 @@
-<p>
-  post works!
-</p>
+<div class="column">
+  <div class="image">
+    <img [src]="post.media.m">
+  </div>
+  <div>
+    <a href="post.link">
+      <div>{{post.title}}</div>
+    </a> by 
+    <a [href]= "'https://www.flickr.com/photos/' + getAuthor(post.author)">{{getAuthor(post.author)}}</a>
+  </div>
+</div>

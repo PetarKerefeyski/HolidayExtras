@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { PostComponent } from './post/post.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PostComponent } from './post/post.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule, 
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,16 @@
+
+.column {
+    padding: 0px;
+    margin: 10px;
+    height: 350px;
+    line-height: 15pt;
+    font-weight: bold;
+    font-size: 12pt;
+    text-align: center;
+    border: 1px solid grey;
+  }
+
+  img {
+    height: 300px;
+  }
+  

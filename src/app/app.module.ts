@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { PostComponent } from './post/post.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './filters.pipe';
 
 @NgModule({
@@ -19,6 +19,7 @@ import { FilterPipe } from './filters.pipe';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule, 
     InfiniteScrollModule
   ],

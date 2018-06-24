@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GalleryComponent } from './gallery.component';
+import { GalleryService } from '../gallery.service';
 
 describe('GalleryComponent', () => {
   let component: GalleryComponent;
@@ -8,7 +9,9 @@ describe('GalleryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GalleryComponent ]
+      declarations: [ GalleryComponent ],
+      imports: [ FormsModule, ReactiveFormsModule ],
+      providers: [ GalleryService ]
     })
     .compileComponents();
   }));

@@ -1,47 +1,42 @@
 .column {
-    margin: 10px 10px 10px 0px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #D2D2D3;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-size: 12pt;
-    text-align: center;
-    border-radius: 5px;
-    
-  }
+  margin: 10px 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #D2D2D3;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 12pt;
+  text-align: center;
+  border-radius: 5px;
+}
 
-  img {
-    /* width: 100%; */
-  }
+.author {
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px;
+  display: inline-block;
+  overflow: hidden;
+}
 
-  .author {
-    color: #000;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 10px;
-    display: inline-block;
-    overflow: hidden;
-  }
+.title {
+  line-height: 48px;
+  text-align: center;
+  overflow: hidden;
+  color: #000;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px;
+  border-bottom: 2px solid #D2D2D3;
+}
 
-  .title {
-    line-height: 48px;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    color: #000;
-    font-size: 13px;
-    font-weight: 600;
-    border-bottom: 2px solid #D2D2D3;
-  }
+.tags {
+  padding: 10px;
+  color: #b3b3b3;
+  font-weight: 400;
+  font-size: 14px;
+  overflow: hidden;
+}
 
-  .tags {
-    padding: 10px;
-    color: #b3b3b3;
-    font-weight: 400;
-    font-size: 14px;
-    overflow: hidden;
-  }
-
-  .property {
-    font-size: 16px;
-    color: #555556;
-  }
+.property {
+  font-size: 16px;
+  color: #555556;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit, ValueProvider } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GalleryService } from '../gallery.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
@@ -13,9 +13,7 @@ import * as _ from 'lodash';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor(private galleryService: GalleryService) {
-    
-  }
+  constructor(private galleryService: GalleryService) { }
 
   public posts: any;
   public allPosts: any;
@@ -25,16 +23,16 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit() {
     this.getGalleryData();
+    this.query = '';
   }
 
   getGalleryData(): void {
     this.galleryService.getGalleryData().subscribe(
       data => {
-        console.log(data);
         this.allPosts = _.cloneDeep(data);
         this.posts = data;
         this.posts.items.length = 10;
-        this.offset = 5;
+        this.offset = 1;
         this.currIndex = 10;
       }
     )
@@ -48,6 +46,5 @@ export class GalleryComponent implements OnInit {
       this.posts.items.push(this.allPosts.items[index]);
     }
     this.currIndex += this.offset;
-  }
-  
+  }  
 }

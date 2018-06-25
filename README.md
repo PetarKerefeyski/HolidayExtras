@@ -1,6 +1,6 @@
-## Flickr Photo Stream
+# Flickr Photo Stream
 
-# Getting Started
+## Getting Started
 Simple Angular app for reviewing latest public Flickr photos.
 
 The application has the following features: 
@@ -10,7 +10,7 @@ The application has the following features:
 - Redirection to user or photo
 - Responsiveness
 
-# Installing
+## Installing
 This project is done with the latest version of Angular (for the time being 6.0.8) requires node >=v9.11.1.
 
 ```
@@ -30,7 +30,9 @@ npm start
 
 ```
 
-# Directory Structure
+## Directory Structure
+
+```
 
 ├── e2e
 ├── node_modules
@@ -73,6 +75,8 @@ npm start
 ├── tslint.json
 └── README.md             <- project readme and how to install
 ```
-#Author
+
+## Author
+
 Petar Kerefeyski
 

@@ -1,8 +1,5 @@
 <div class="container">
-  <h1>Holiday Extras Task</h1>
-  <h2>Flickr Photo Stream</h2>
-  <input type="text" name="imageName" placeholder="Search by photo title" [(ngModel)]="query" id="listSearch">
-
+  <input type="text" name="imageName" placeholder="Search by photo title" [(ngModel)]="query">
   <div class="row" *ngIf="posts" 
     infinite-scroll
     [infiniteScrollDistance]="1"

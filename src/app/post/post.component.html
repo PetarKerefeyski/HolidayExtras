@@ -1,21 +1,23 @@
-<div class="author">
-    <span class="property">Author:</span> 
-  <a target="_blank" [href]= "'https://www.flickr.com/photos/' + getAuthor(post.author)">
-      {{getAuthor(post.author)}}
-  </a>
-</div>
-<div class="image">
-  <img [src]="post.media.m">
-  <div class="title">
-    <a target="_blank" [href]="post.media.m">
-      <div>{{post.title}}</div>
+<div *ngIf="post">
+  <div class="author">
+      <span class="property">Author:</span> 
+    <a target="_blank" [href]= "'https://www.flickr.com/photos/' + getAuthor(post.author)">
+        {{getAuthor(post.author)}}
     </a>
-  </div>  
-  <div>
-    <div class="tags">
-      <span class="property">Tags: </span> 
-      <span *ngIf="!post.tags.length">No tags related </span>
-      <span *ngIf="post.tags.length">{{separateTags(post.tags)}} </span>
+  </div>
+  <div class="image">
+    <img [src]="post.media.m">
+    <div class="title">
+      <a target="_blank" [href]="post.media.m">
+        <div>{{post.title}}</div>
+      </a>
+    </div>  
+    <div>
+      <div class="tags">
+        <span class="property">Tags: </span> 
+        <span *ngIf="!post.tags.length">No tags related </span>
+        <span *ngIf="post.tags.length">{{separateTags(post.tags)}} </span>
+      </div>
     </div>
   </div>
 </div>

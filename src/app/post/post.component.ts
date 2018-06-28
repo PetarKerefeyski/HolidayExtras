@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
+
   @Input()
   post: object;
   query: string;
@@ -21,5 +22,10 @@ export class PostComponent implements OnInit {
     author = author.substring(flickrLink.length, author.length - 2);
     author = author.replace(/\s/g, "");
     return author;
+  }
+
+  separateTags(tags: string): string {
+    tags = tags.replace(/\s/g, ", ");
+    return tags;
   }
 }

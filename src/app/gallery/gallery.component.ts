@@ -1,8 +1,11 @@
 import { Component, OnInit, ValueProvider } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GalleryService } from '../gallery.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { FilterPipe } from '../filters.pipe';
+import { Pipe, PipeTransform } from '@angular/core';
+
 import * as _ from 'lodash';
 
 @Component({
